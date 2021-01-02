@@ -41,7 +41,7 @@ def Qlearn(env, numEpisodes, discountFactor=0.9, alpha=0.5, epsilon=0.1):
         #step through envirmonment
         while True:
             
-            #take step
+            #take a step
             actionProbs = policy(s)
             a = np.random.choice(np.arange(len(actionProbs)), p=actionProbs)
             [(nextState, reward, done)] = actionSteps[s][a]
